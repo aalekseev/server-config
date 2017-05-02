@@ -101,6 +101,7 @@ endif
 
 " 256 colors
 set t_Co=256
+color OceanicNext
 
 " Netrw settings
 let g:netrw_list_hide = '.*\.swp$,'
