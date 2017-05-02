@@ -1,22 +1,5 @@
-
 " We want Vim, not vi
 set nocompatible
-
-call plug#begin('$HOME/.vim/plugged')
-Plug 'digitaltoad/vim-pug', { 'for': 'jade' }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'groenewege/vim-less', { 'for': 'less' }
-Plug 'kien/ctrlp.vim'
-Plug 'dracula/vim'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'scrooloose/syntastic'
-Plug 'metakirby5/codi.vim', { 'for': ['python', 'javascript'] }
-Plug 'tmhedberg/SimpylFold'
-Plug 'tomtom/tcomment_vim'
-Plug 'dodie/vim-disapprove-deep-indentation', { 'for': ['python', 'javascript'] }
-
-call plug#end()
 
 " Set encoding
 set encoding=utf-8
@@ -27,26 +10,13 @@ set foldlevel=99
 set showcmd
 
 " NNOREMAPS
-" comment / decomment & normal comment behavior
-nnoremap <leader>c :TComment<CR>
 " twice a leader to switch buffer
 nnoremap <leader><leader> <c-^>
 " Enable folding with a spacebar
 nnoremap <space> za
 
-" See the docstrings for folded code
-let g:SimplyFold_docstring_preview=1
-
 " Make python pretty
 let python_hightlight_all=1
-
-" Ignore files for ctrlp
-set wildignore+=*.so,*.swp,*.zip,*.pyc,*.pyo
-let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.git|node_modules|bower_components)$',
-    \ 'file': '\v\.(so|swp|zip|pyc|pyo|sqlite3|sql)'
-    \ }
-
 " Switch between buffers without having to save first.
 set hidden
 " Show as much as possible of the last line.
@@ -129,11 +99,7 @@ if has('mouse')
   set mouse=a
 endif
 
-" fuzzt search
-set path+=**
-
-" Theme settings
-color dracula
+" 256 colors
 set t_Co=256
 
 " Netrw settings
