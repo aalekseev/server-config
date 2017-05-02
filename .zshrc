@@ -10,5 +10,5 @@ export ZSH=$HOME/.oh-my-zsh
 
 plugins=(git pip python postgres command-not-found supervisor tmux)
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh && cd ~/project
 
